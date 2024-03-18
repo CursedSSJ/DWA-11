@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tally Count</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.14.0/cdn/themes/light.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.14.0/cdn/shoelace-autoloader.js"
+    ></script>
+  </head>
+
+  <style>
+    .card-basic {
+      max-width: 100%;
+      color: black;
+      text-align: center;
+      margin-top: var(--sl-spacing-medium);
+      margin-bottom: var(--sl-spacing-medium);
+    }
+
+    body {
+      background-color: var(--sl-color-gray-600);
+      text-align: center;
+    }
+  </style>
+
+  <body>
+    <header>
+      <h1>Tally Count</h1>
+    </header>
+    <main>
+      <sl-input
+        style="
+          margin-top: var(--sl-spacing-medium);
+          margin-bottom: var(--sl-spacing-medium);
+        "
+        data-key="number"
+        readonly
+        value="0"
+      ></sl-input>
+      <sl-button-group
+        style="
+          width: 100%;
+          margin-top: var(--sl-spacing-medium);
+          margin-bottom: var(--sl-spacing-medium);
+        "
+        label="Alignment"
+      >
+        <sl-button
+          style="width: 100%"
+          variant="default"
+          size="large"
+          data-key="subtract"
+          >-</sl-button
+        >
+        <sl-button
+          style="width: 100%"
+          variant="default"
+          size="large"
+          data-key="add"
+          >+</sl-button
+        >
+      </sl-button-group>
+    </main>
+
+    <sl-button
+      style="width: 100%"
+      variant="default"
+      size="large"
+      data-key="reset"
+      >Reset</sl-button
+    >
+
+    <sl-card style="display: none" class="card-basic" data-key="confirmation">
+      The counter has been reset
+    </sl-card>
+
+    <sl-card class="card-basic">
+      Inspired by
+      <a class="footer__link" href="http://tallycount.app/">Tally Count</a>
+      Note that this is merly a student practice project for learning
+      JavaScript.
+    </sl-card>
+  </body>
+</html>
